@@ -1,53 +1,127 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# Planted in Pretraining, Swayed by Finetuning
 
+_Disentangling the Origins of Cognitive Biases in Language Models_
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+<img src="docs/assets/project_logo.png" alt="Project Logo" width="150"/>
 
+---
 
+## 📘 Introduction
 
-## Start using the template
-To start using the template click on `Use this Template`.
+This repository contains the code for our paper:
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+> **Planted in Pretraining, Swayed by Finetuning: A Case Study on the Origins of Cognitive Biases in LLMs**
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+We investigate the **origin of cognitive biases** in large language models (LLMs). While prior work showed these biases emerge and even intensify after instruction tuning, it's unclear whether they are caused by **pretraining**, **finetuning data**, or **training randomness**.
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+We propose a two-step **causal analysis framework**:
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://horwitz.ai](https://horwitz.ai)
+- First, we assess how much **random seed fluctuations** affect bias scores.
+- Second, we perform **cross-tuning**: swapping instruction datasets between pretrained models to identify if biases are driven by the pretraining backbone or the finetuning data.
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+Our results show that:
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+- Training **randomness introduces some noise** in bias scores.
+- However, **pretraining consistently dominates** as the primary source of biases, with instruction tuning playing a secondary role.
+
+---
+
+## 🧭 Repository Structure
+
+This repository integrates and builds on three main sub-repositories:
+
+- 📦 [`open-instruct`](https://github.com/allenai/open-instruct): Parameter-efficient LoRA finetuning framework.
+- 📊 [`instructed-to-bias`](https://github.com/itay1itzhak/InstructedToBias): Evaluation for belief and certainty biases.
+- 🧠 [`cognitive-biases-in-llms`](https://github.com/simonmalberg/cognitive-biases-in-llms): Benchmark suite for 30 cognitive biases.
+
+Refer to those repositories for dataset structures, implementation details, and original evaluation scripts.
+
+---
+
+## 🔗 Model & Dataset Access
+
+All trained models across seeds and the subsampled Flan instruction dataset are hosted on Hugging Face:
+
+➡️ [**Hugging Face Collection**: `planted_in_pretraining`](https://huggingface.co/collections/itay1itzhak/planted-in-pretraining-68596cd05b50f3e93325b2d3)
+
+---
+
+## ⚙️ Environment Setup
+
+We recommend setting up with `conda`:
+
+```bash
+conda create -n bias_origin python=3.10 -y
+conda activate bias_origin
+pip install -r requirements.txt
+
+# Optional: install submodules in editable mode
+git clone https://github.com/allenai/open-instruct.git
+pip install -e open-instruct/
+
+git clone https://github.com/itay1itzhak/InstructedToBias.git
+pip install -e instructed-to-bias/
+
+git clone https://github.com/simonmalberg/cognitive-biases-in-llms.git
+pip install -e cognitive-biases-in-llms/
+```
+
+---
+
+## 🚀 Key Analyses
+
+### 🎲 Step 1: Training Randomness Analysis
+
+> _What it checks:_  
+> This experiment finetunes the **same model and dataset with different seeds** to test how much randomness affects bias scores.
+
+```bash
+python run_randomness_analysis.py --granularity-levels model_bias
+```
+
+> _What we found:_  
+> Randomness introduces **minor fluctuations** in individual bias scores, but **averaging across seeds recovers stable patterns**. This suggests randomness alone is not a primary driver of cognitive bias.
+
+---
+
+### 🔁 Step 2: Cross-Tuning Clustering Analysis
+
+> _What it checks:_  
+> This analysis **swaps instruction datasets** between two pretrained models (e.g., Flan vs Tulu) and compares their **bias vectors**. We cluster models either by pretraining backbone or instruction data.
+
+```bash
+python run_similarity_analysis.py \
+    --granularity-levels model_bias_scenario \
+    --models-to-include T5,OLMo
+```
+
+> _What we found:_  
+> Models cluster **strongly by pretraining** identity. Even after swapping instruction data, bias patterns remain closer to the original backbone than to the new data. This supports our main claim: **biases are planted during pretraining**.
+
+---
+
+## 📊 Visual Outputs
+
+Example outputs (PDFs saved to `plots/`):
+
+![Randomness Plot](docs/figs/randomness_effect.pdf)  
+![Cross-Tuning PCA](docs/figs/cross_tuning_pca.pdf)
+
+---
+
+## 📚 Citation
+
+To cite our work, use the BibTeX entry from Google Scholar.
+
+---
+
+## 📜 License
+
+Apache License 2.0. See [`LICENSE`](LICENSE) for details.
+
+---
+
+## 📬 Contact
+
+For questions or collaborations, please reach out via GitHub Issues or email:  
+📧 [itay1itzhak at-gmail-com]

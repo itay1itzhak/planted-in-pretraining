@@ -1,312 +1,154 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta charset="UTF-8" />
+  <title>Planted in Pretraining, Swayed by Finetuning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Causal origin analysis of cognitive biases in language models." />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style>
+    body { font-family: 'Noto Sans', sans-serif; background-color: #f9f9f9; padding: 1.5rem; }
+    section.section { background: white; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); padding: 2rem; margin-bottom: 2rem; }
+    .pdf-image, .two-col img { border: 1px solid #ccc; border-radius: 4px; max-width: 50%; margin: 0.5rem 0; }
+    .image-row-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1500px;  /* Optional: limits row width */
+      justify-content: center;
+    }
+    .two-col img {
+      flex: 1 1 48%;
+      height: auto;
+      max-width: 500px;
+      max-height: 300px;
+      object-fit: contain;
+      border: 0.1px solid #ccc;
+      border-radius: 4px;
+    }
+    .single-image-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      max-width: 1500px;  /* Optional: limits row width */
+    }
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+    .single-centered-image {
+      max-width: 90%;     /* Adjust max size */
+      max-height: 300px;  /* Optional: cap height */
+      height: auto;
+      object-fit: contain;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    pre.bibtex-box { background: #f4f4f4; border-left: 5px solid #999; padding: 1rem; overflow-x: auto; }
+    .hero-logo { max-height: 180px; margin: 1rem auto; }
+    .title.is-2 .subtitle-text { font-size: 0.6em; display: block; margin-top: 0.2em; }
+    .caption-box { background: #eef1f8; border-left: 4px solid #5d6d7e; padding: 1rem; font-size: 0.9em; margin-top: 1rem; }
+  </style>
 </head>
 <body>
 
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
+<section class="hero is-light is-bold">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+    <div class="container has-text-centered">
+      <h1 class="title is-2">Planted in Pretraining, Swayed by Finetuning
+        <span class="subtitle-text">A Case Study on the Origins of Cognitive Biases in LLMs</span>
+      </h1>
+      <img src="static/images/logo.png" alt="Project Logo" class="hero-logo"/>
+      <div class="buttons is-centered mt-4">
+        <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2507.XXXXX"><span class="icon"><i class="ai ai-arxiv"></i></span><span>Paper</span></a>
+        <a class="button is-dark is-rounded" href="https://github.com/itay1itzhak/planted-in-pretraining"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+        <a class="button is-dark is-rounded" href="https://huggingface.co/collections/itay1itzhak/planted-in-pretraining"><span class="icon">🤗</span><span>Models</span></a>
+        <a class="button is-dark is-rounded" href="mailto:itay1itzhak@gmail.com"><span class="icon">📧</span><span>Contact</span></a>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
+      <p class="mt-4"><strong>Itay Itzhak</strong>, Yonatan Belinkov, Gabriel Stanovsky</p>
+      <p>Technion · Hebrew University · Allen Institute for AI</p>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
+<section class="section">
+  <h2 class="title is-3">TL;DR</h2>
+  <p>We investigate the causal origin of cognitive biases in LLMs. Using a novel two-step causal framework, we find that <strong>biases primarily originate during pretraining</strong>, while instruction tuning and training randomness have only minor effects. These results suggest that many observed behaviors in LLMs, such as framing effects, belief bias, and stereotyping, are inherited from the pretraining phase. They are surfaced, not introduced, by finetuning. Our findings highlight the importance of addressing bias at the pretraining stage to develop more trustworthy and interpretable models.</p>
+</section>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
+<section class="section">
+  <h2 class="title is-3">Causal Framework</h2>
+  <div class="single-image-wrapper">
+    <img src="static/images/graph.png" alt="Causal Graph for Bias Emergence" class="single-centered-image"/>
+  </div>
+  <div class="caption-box">
+    A high-level causal graph describing how observed biases in LLMs may stem from <strong>pretraining</strong>, <strong>instruction finetuning</strong>, or <strong>training randomness</strong>. Our analysis proceeds in two steps: Step 1 isolates the role of randomness by repeating finetuning with different seeds, and Step 2 uses <em>cross-tuning</em> to test whether instruction datasets or pretraining backbones are the dominant sources of bias.
   </div>
 </section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
+<section class="section">
+  <h2 class="title is-3">Abstract</h2>
+  <p>Large language models (LLMs) exhibit cognitive biases, which are systematic deviations from rational decision-making similar to those observed in humans. While prior work has noted the presence and amplification of such biases in instruction-tuned models, the origins of these behaviors remain unclear. We introduce a two-step causal methodology to disentangle the contributions of <strong>pretraining</strong>, <strong>instruction data</strong>, and <strong>training randomness</strong>. First, we assess how model behavior varies across random seeds. Then, using a <em>cross-tuning</em> setup, we swap instruction datasets between two models with different pretraining histories. Across 32 cognitive biases and two instruction datasets (Flan and Tulu-2), we find that pretraining overwhelmingly determines the model’s bias pattern. These insights highlight the central role of pretraining in shaping LLM behavior and have implications for evaluation and mitigation strategies.</p>
 </section>
-<!--End BibTex citation -->
+
+<section class="section">
+  <h2 class="title is-3">Randomness</h2>
+  <p>We examine the effect of random seed variation by finetuning each model three times with identical data and varying initialization. Bias scores and task accuracy (MMLU) are measured across seeds to assess stability.</p>
+  <div class="two-col img">
+    <img src="randomness_std.png" alt="Bias Score Std Dev" class="pdf-image"/>
+    <img src="randomness_consistency.png" alt="Bias Mean/Agreement" class="pdf-image"/>
+  </div>
+  <p><strong>Result:</strong> Training randomness introduces moderate variation, especially in behavioral biases, though key trends remain consistent. Aggregating results across seeds, using the mean or majority vote, stabilizes bias estimates and preserves the original model’s tendencies.</p>
+</section>
+
+<section class="section">
+  <h2 class="title is-3">Cross-Tuning</h2>
+  <p>To separate the effects of pretraining from instruction data, we <strong>cross-tune</strong> two models (OLMo-7B and T5-11B) on each other's datasets (Tulu-2 and Flan). This creates four model variants with distinct combinations of pretraining and instruction. We then analyze their behavior using PCA on bias vectors and assess cluster separability.</p>
+  
+  <div class="two-col img">
+    <img src="static/images/cross tuning_setup.png" alt="Cross-Tuning Setup"/>
+    <img src="static/images/cross_tuning_flow_chart.png" alt="Cross-Tuning Causality"/>
+  </div>
+  <p><strong>Result:</strong> Models cluster based on <strong>pretraining backbone</strong>, not instruction data. Even after instruction datasets are swapped, the model’s bias profile stays aligned with its pretraining history. This pattern holds across all 32 tested biases and is consistently replicated using community-trained models (Llama2-7B and Mistral-7B finetuned on Tulu-2 and ShareGPT).</p>  
+  <div class="single-image-wrapper">
+    <img src="static/images/clustering_pca_bias_1.png" alt="PCA Bias Clustering" class="single-centered-image"/>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="title is-3">Conclusion</h2>
+  <p>Cognitive biases in LLMs are <strong>shaped during pretraining</strong>, not introduced during instruction tuning or caused by randomness. Our causal analysis shows that post-hoc alignment methods alone may not be sufficient for bias mitigation. These findings highlight a broader truth: many downstream behaviors of LLMs are reflections of their pretraining process. If we want to build models that are more reliable and fair, we must consider the impact of pretraining. </p>
+</section>
 
 
-  <footer class="footer">
+<section class="section">
+  <h2 class="title is-3">BibTeX</h2>
+  <pre class="bibtex-box">@article{itzhak2025planted,
+  title={Planted in Pretraining, Swayed by Finetuning: A Case Study on the Origins of Cognitive Biases in LLMs},
+  author={Itzhak, Itay and Stanovsky, Gabriel and Rosenfeld, Nir and Belinkov, Yonatan},
+  journal={arXiv preprint arXiv:2507.XXXXX},
+  year={2025}
+}</pre>
+</section>
+
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
