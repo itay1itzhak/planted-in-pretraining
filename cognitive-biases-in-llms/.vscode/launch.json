@@ -1,0 +1,295 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "OLMo-Flan-Seed-1",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run/test_decision.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--model",
+                "OLMo-Flan-Seed-1",
+                "--n_workers",
+                "1",
+                "--n_batches",
+                "1",
+                "--limit_dataset_size",
+                "5"
+            ]
+        },
+        {
+            "name": "T5-Flan-Seed-0",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run/test_decision.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--model",
+                "T5-Flan-Seed-0",
+                "--n_workers",
+                "1",
+                "--n_batches",
+                "1",
+                "--limit_dataset_size",
+                "5",
+            ]
+        },
+        {
+            "name": "Evaluate Mistral (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run/test_decision.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--model",
+                "Mistral-ShareGPT",
+                "--n_workers",
+                "1",
+                "--n_batches",
+                "1",
+                "--limit_dataset_size",
+                "5",
+            ]
+        },
+        {
+            "name": "Evaluate Llama2 (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run/test_decision.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--model",
+                "Llama2-ShareGPT-Seed-1",
+                "--n_workers",
+                "1",
+                "--n_batches",
+                "1",
+                "--limit_dataset_size",
+                "5",
+            ]
+        },
+        {
+            "name": "Run Analysis with Scaling",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "model_bias_scenario",
+                "--debug",
+            ]
+        },
+        {
+            "name": "Run Analysis without Scaling",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "model_bias_scenario",
+                //"--debug",
+                "--no-scaling",
+                "--handle-missing-values",
+                "remove"
+            ]
+        },
+        {
+            "name": "Run Analysis without Scaling with Error Threshold",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "model_bias_scenario",
+                "--debug",
+                "--no-scaling",
+                "--error-threshold",
+                "500",
+                "--handle-missing-values",
+                "remove"
+            ]
+        },
+        {
+            "name": "Run Analysis without Scaling with removing Missing Values", // removing missing values 
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "model_bias_scenario",
+                //"--debug",
+                "--no-scaling",
+                "--handle-missing-values",
+                "remove"
+            ]
+        }, 
+        {
+            "name": "Run Analysis without Scaling with X-level imputing Missing Values (reported results to CoLM)",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "model_bias_scenario",
+                "--models-to-include",
+                "OLMo,T5",
+                //"--debug",
+                "--no-scaling",
+                "--add-certainty-and-belief",
+                "--handle-missing-values",
+                "impute_model_bias_scenario_level",
+                "--n-kmeans-trials",
+                "30"
+                //"1"
+            ]
+        }, 
+        {
+            "name": "Run Analysis without Scaling with X-level imputing Missing Values (Full FT models)",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "model_bias_scenario",
+                //"--debug",
+                "--no-scaling",
+                "--models-to-include",
+                "Llama2,Mistral",
+                //"--add-certainty-and-belief",
+                "--handle-missing-values",
+                "impute_model_bias_scenario_level",
+                "--n-kmeans-trials",
+                "30"
+            ]
+        }, 
+        {
+            "name": "Run Analysis without Scaling with X-level imputing Missing Values (All models)",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "model_bias_scenario",
+                //"--debug",
+                "--no-scaling",
+                //"--add-certainty-and-belief",
+                "--handle-missing-values",
+                "impute_model_bias_scenario_level",
+                "--n-kmeans-trials",
+                "30"
+            ]
+        }, 
+        {
+            "name": "Run Analysis no Scaling imputing Missing Values and Error Threshold",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "model_bias_scenario",
+                //"--debug",
+                "--no-scaling",
+                "--add-certainty-and-belief",
+                "--handle-missing-values",
+                "impute_model_bias_scenario_level",
+                "--n-kmeans-trials",
+                "30",
+                "--error-threshold",
+                "500"
+            ]
+        }, 
+        {
+            "name": "Run Randomness Analysis",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "run_randomness_analysis.py",
+            "cwd": "${workspaceFolder}/run",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONWARNINGS": "ignore"
+            },
+            "args": [
+                "--granularity-levels",
+                "model_bias",
+                "--debug",
+            ]
+        },
+    ]
+}

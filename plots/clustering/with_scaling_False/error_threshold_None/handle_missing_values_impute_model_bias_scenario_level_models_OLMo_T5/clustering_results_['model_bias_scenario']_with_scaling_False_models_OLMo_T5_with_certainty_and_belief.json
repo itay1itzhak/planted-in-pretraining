@@ -1,0 +1,146 @@
+[
+  {
+    "granularity_level": "model_bias_scenario",
+    "unsupervised": {
+      "best": {
+        "metrics": {
+          "silhouette": {
+            "value": 0.07568148982089493,
+            "p_value": 0.0
+          },
+          "calinski_harabasz": {
+            "value": 1.6509413709564773,
+            "p_value": 0.0
+          },
+          "davies_bouldin": {
+            "value": 1.6203911433391185,
+            "p_value": 1.0
+          }
+        },
+        "n_clusters_best": 2
+      },
+      "median": {
+        "metrics": {
+          "silhouette": {
+            "value": 0.05246327891341468,
+            "p_value": 0.0
+          },
+          "calinski_harabasz": {
+            "value": 1.8950786627018166,
+            "p_value": 0.0
+          },
+          "davies_bouldin": {
+            "value": 2.3400223091892927,
+            "p_value": 1.0
+          }
+        },
+        "n_clusters_median": 2
+      }
+    },
+    "supervised": {
+      "pretraining": {
+        "metrics": {
+          "silhouette": {
+            "value": 0.06615621288757302,
+            "p_value": 0.0
+          },
+          "calinski_harabasz": {
+            "value": 1.9667887198196352,
+            "p_value": 0.0
+          },
+          "davies_bouldin": {
+            "value": 2.4560426406512446,
+            "p_value": 1.0
+          }
+        },
+        "manova": {
+          "f_statistics": 2.2171689084376425,
+          "p_values": NaN,
+          "significant_dims": 729
+        }
+      },
+      "instruction": {
+        "metrics": {
+          "silhouette": {
+            "value": 0.03434659856828091,
+            "p_value": 0.044
+          },
+          "calinski_harabasz": {
+            "value": 1.440082019978847,
+            "p_value": 0.036
+          },
+          "davies_bouldin": {
+            "value": 2.869047653282503,
+            "p_value": 0.952
+          }
+        },
+        "manova": {
+          "f_statistics": 1.3947288707498013,
+          "p_values": NaN,
+          "significant_dims": 370
+        }
+      },
+      "random_mean": {
+        "metrics": {
+          "silhouette": 0.007928801818272078,
+          "calinski_harabasz": 1.0956688088641306,
+          "davies_bouldin": 3.3124121007772707
+        }
+      }
+    },
+    "label_agreement": {
+      "pretraining": {
+        "ari": 0.04567699836867863,
+        "nmi": 0.20118770196173244
+      },
+      "instruction": {
+        "ari": 0.04567699836867863,
+        "nmi": 0.20118770196173244
+      },
+      "random_mean": {
+        "ari": -0.03915171288743882,
+        "nmi": 0.0
+      }
+    },
+    "distance_tests": {
+      "best": {
+        "ks_statistic": 0.43905472636815923,
+        "p_value": 0.001338861527810773,
+        "mean_intra_dist": 30.358755190231218,
+        "mean_inter_dist": 32.39077986285229,
+        "std_intra_dist": 3.2692201203629354,
+        "std_inter_dist": 1.8479813472062299
+      },
+      "median": {
+        "ks_statistic": 0.23526570048309178,
+        "p_value": 0.12089823602337148,
+        "mean_intra_dist": 30.296428377218216,
+        "mean_inter_dist": 31.50621353559798,
+        "std_intra_dist": 2.8532138914347818,
+        "std_inter_dist": 3.208446689017666
+      },
+      "pretraining": {
+        "ks_statistic": 0.3129251700680272,
+        "p_value": 0.018402350953141872,
+        "mean_intra_dist": 29.753533689836722,
+        "mean_inter_dist": 31.8727938669552,
+        "std_intra_dist": 3.4709322702644423,
+        "std_inter_dist": 2.3187136257700582
+      },
+      "instruction": {
+        "ks_statistic": 0.25510204081632654,
+        "p_value": 0.08713358246990319,
+        "mean_intra_dist": 30.316473092022143,
+        "mean_inter_dist": 31.39027437936769,
+        "std_intra_dist": 3.6601773221352185,
+        "std_inter_dist": 2.4000853434749563
+      },
+      "random_mean": {
+        "ks_statistic": 0.16394557823129252,
+        "p_value": 0.5371228025213718,
+        "mean_intra_dist": 30.76850074373357,
+        "mean_inter_dist": 31.002822106472188
+      }
+    }
+  }
+]

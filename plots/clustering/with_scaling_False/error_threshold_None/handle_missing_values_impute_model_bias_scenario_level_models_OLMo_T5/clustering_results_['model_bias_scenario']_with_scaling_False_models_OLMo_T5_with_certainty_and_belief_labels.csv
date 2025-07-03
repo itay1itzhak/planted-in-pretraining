@@ -1,0 +1,15 @@
+granularity_level,model,unsupervised_best_label,unsupervised_median_label,pretraining_label,instruction_label,random_run_run_0,random_run_run_1,random_run_run_2,random_run_run_3,random_run_run_4
+model_bias_scenario,Flan-T5,0,1,1,0,1,1,0,0,1
+model_bias_scenario,OLMo-Flan-Seed-0,1,0,0,0,1,1,1,1,1
+model_bias_scenario,OLMo-Flan-Seed-1,1,0,0,0,1,1,0,0,1
+model_bias_scenario,OLMo-Flan-Seed-2,1,1,0,0,1,0,1,1,1
+model_bias_scenario,OLMo-SFT,1,1,0,1,0,1,1,1,1
+model_bias_scenario,OLMo-Tulu-Seed-0,1,0,0,1,1,1,0,0,1
+model_bias_scenario,OLMo-Tulu-Seed-1,1,0,0,1,0,0,0,1,1
+model_bias_scenario,OLMo-Tulu-Seed-2,1,0,0,1,0,1,0,1,0
+model_bias_scenario,T5-Flan-Seed-0,1,1,1,0,1,0,0,0,0
+model_bias_scenario,T5-Flan-Seed-1,1,1,1,0,0,0,1,0,0
+model_bias_scenario,T5-Flan-Seed-2,0,1,1,0,0,0,1,1,0
+model_bias_scenario,T5-Tulu-Seed-0,1,1,1,1,1,0,0,1,0
+model_bias_scenario,T5-Tulu-Seed-1,1,1,1,1,0,1,1,0,0
+model_bias_scenario,T5-Tulu-Seed-2,1,1,1,1,0,0,1,0,0

@@ -1,0 +1,146 @@
+[
+  {
+    "granularity_level": "model_bias_scenario",
+    "unsupervised": {
+      "best": {
+        "metrics": {
+          "silhouette": {
+            "value": 0.0961808878701057,
+            "p_value": 0.114
+          },
+          "calinski_harabasz": {
+            "value": 1.6602446260619472,
+            "p_value": 0.084
+          },
+          "davies_bouldin": {
+            "value": 1.5469774715057194,
+            "p_value": 1.0
+          }
+        },
+        "n_clusters_best": 2
+      },
+      "median": {
+        "metrics": {
+          "silhouette": {
+            "value": 0.08904680092530731,
+            "p_value": 0.114
+          },
+          "calinski_harabasz": {
+            "value": 1.5431596128998666,
+            "p_value": 0.084
+          },
+          "davies_bouldin": {
+            "value": 1.4529453542009891,
+            "p_value": 1.0
+          }
+        },
+        "n_clusters_median": 2
+      }
+    },
+    "supervised": {
+      "pretraining": {
+        "metrics": {
+          "silhouette": {
+            "value": 0.0961808878701057,
+            "p_value": 0.114
+          },
+          "calinski_harabasz": {
+            "value": 1.6602446260619472,
+            "p_value": 0.084
+          },
+          "davies_bouldin": {
+            "value": 1.5469774715057194,
+            "p_value": 1.0
+          }
+        },
+        "manova": {
+          "f_statistics": 3.4639275442033712,
+          "p_values": 0.4427475031540542,
+          "significant_dims": 439
+        }
+      },
+      "instruction": {
+        "metrics": {
+          "silhouette": {
+            "value": 0.013911001831119095,
+            "p_value": 0.308
+          },
+          "calinski_harabasz": {
+            "value": 1.0564656364675056,
+            "p_value": 0.282
+          },
+          "davies_bouldin": {
+            "value": 1.9370177762724645,
+            "p_value": 0.804
+          }
+        },
+        "manova": {
+          "f_statistics": 2.042420128961486,
+          "p_values": 0.47861960619556354,
+          "significant_dims": 311
+        }
+      },
+      "random_mean": {
+        "metrics": {
+          "silhouette": -0.026613164146622993,
+          "calinski_harabasz": 0.8346746526721637,
+          "davies_bouldin": 2.1957489786943336
+        }
+      }
+    },
+    "label_agreement": {
+      "pretraining": {
+        "ari": 1.0,
+        "nmi": 1.0
+      },
+      "instruction": {
+        "ari": -0.1111111111111111,
+        "nmi": 0.08170416594551082
+      },
+      "random_mean": {
+        "ari": -0.11111111111111112,
+        "nmi": 0.08170416594551082
+      }
+    },
+    "distance_tests": {
+      "best": {
+        "ks_statistic": 0.7222222222222222,
+        "p_value": 0.027972027972027972,
+        "mean_intra_dist": 30.073654297117667,
+        "mean_inter_dist": 33.29501046966786,
+        "std_intra_dist": 2.473213600846613,
+        "std_inter_dist": 1.5417900438851118
+      },
+      "median": {
+        "ks_statistic": 0.5714285714285714,
+        "p_value": 0.1414141414141414,
+        "mean_intra_dist": 30.456525581262962,
+        "mean_inter_dist": 33.362667617609496,
+        "std_intra_dist": 2.444725033104112,
+        "std_inter_dist": 1.6615210248514016
+      },
+      "pretraining": {
+        "ks_statistic": 0.7222222222222222,
+        "p_value": 0.027972027972027972,
+        "mean_intra_dist": 30.073654297117667,
+        "mean_inter_dist": 33.29501046966786,
+        "std_intra_dist": 2.473213600846613,
+        "std_inter_dist": 1.5417900438851118
+      },
+      "instruction": {
+        "ks_statistic": 0.2222222222222222,
+        "p_value": 0.987212787212787,
+        "mean_intra_dist": 31.77541348359038,
+        "mean_inter_dist": 32.16050434535271,
+        "std_intra_dist": 3.0967529753778633,
+        "std_inter_dist": 2.0379541547353375
+      },
+      "random_mean": {
+        "ks_statistic": 0.39999999999999997,
+        "p_value": 0.6273726273726274,
+        "mean_intra_dist": 32.55472352936524,
+        "mean_inter_dist": 31.64096431483614
+      }
+    }
+  }
+]
