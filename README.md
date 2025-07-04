@@ -1,8 +1,13 @@
 # Planted in Pretraining, Swayed by Finetuning
 
-_Disentangling the Origins of Cognitive Biases in Language Models_
+_Disentangling the Origins of Cognitive Biases in Language Models._
 
-<img src="docs/assets/project_logo.png" alt="Project Logo" width="150"/>
+<img src="static/images/logo.png" alt="Project Logo" width="150"/>
+
+[![Paper](https://img.shields.io/badge/arxiv-paper-red)](https://arxiv.org/abs/2503.xxxx)
+[![Models](https://img.shields.io/badge/🤗-dataset-yellow)](https://huggingface.co/collections/itay1itzhak/planted-in-pretraining)
+[![Website](https://img.shields.io/badge/🌐-website-blue)](https://itay1itzhak.github.io/planted-in-pretraining/)
+[![Contact](https://img.shields.io/badge/📧-contact-green)](mailto:itay1itzhak@gmail.com)
 
 ---
 
