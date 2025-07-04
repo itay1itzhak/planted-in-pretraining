@@ -8,8 +8,11 @@
   <meta name="description" content="A Case Study on the Origins of Cognitive Biases in LLMs" />
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Add these lines for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <style>
-    body { font-family: 'Noto Sans', sans-serif; background-color: #f9f9f9; padding: 1.5rem; }
+    body { font-family: 'Noto Sans', sans-serif; background-color: #f9f9f9; padding: 1.5rem; font-size: 18px; }
     section.section { background: white; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); padding: 2rem; margin-bottom: 2rem; }
     .pdf-image, .two-col img { border: 1px solid #ccc; border-radius: 4px; max-width: 50%; margin: 0.5rem 0; }
     .image-row-wrapper {
@@ -63,7 +66,7 @@
       </h1>
       <img src="static/images/logo.png" alt="Project Logo" class="hero-logo"/>
       <div class="buttons is-centered mt-4">
-        <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2507.XXXXX"><span class="icon"><i class="ai ai-arxiv"></i></span><span>Paper</span></a>
+        <a class="button is-danger is-rounded" href="https://arxiv.org/abs/2507.XXXXX"><span class="icon"><i class="ai ai-arxiv"></i></span><span>Paper</span></a>
         <a class="button is-dark is-rounded" href="https://github.com/itay1itzhak/planted-in-pretraining"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
         <a class="button is-dark is-rounded" href="https://huggingface.co/collections/itay1itzhak/planted-in-pretraining"><span class="icon">🤗</span><span>Models</span></a>
         <a class="button is-dark is-rounded" href="mailto:itay1itzhak@gmail.com"><span class="icon">📧</span><span>Contact</span></a>
@@ -98,8 +101,8 @@
   <h2 class="title is-3">Randomness</h2>
   <p>We examine the effect of random seed variation by finetuning each model three times with identical data and varying initialization. Bias scores and task accuracy (MMLU) are measured across seeds to assess stability.</p>
   <div class="two-col img">
-    <img src="randomness_std.png" alt="Bias Score Std Dev" class="pdf-image"/>
-    <img src="randomness_consistency.png" alt="Bias Mean/Agreement" class="pdf-image"/>
+    <img src="static/images/randomness_std.png" alt="Bias Score Std Dev" class="pdf-image"/>
+    <img src="static/images/randomness_consistency.png" alt="Bias Mean/Agreement" class="pdf-image"/>
   </div>
   <p><strong>Result:</strong> Training randomness introduces moderate variation, especially in behavioral biases, though key trends remain consistent. Aggregating results across seeds, using the mean or majority vote, stabilizes bias estimates and preserves the original model’s tendencies.</p>
 </section>

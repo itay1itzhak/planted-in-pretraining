@@ -17,7 +17,7 @@ _Disentangling the Origins of Cognitive Biases in Language Models._
 
 This repository contains the code for our paper:
 
-> **Planted in Pretraining, Swayed by Finetuning: A Case Study on the Origins of Cognitive Biases in LLMs**
+> <a href="https://arxiv.org/abs/2507.xxxx" target="_blank"><strong>Planted in Pretraining, Swayed by Finetuning: A Case Study on the Origins of Cognitive Biases in LLMs</strong></a>
 
 We investigate the **origin of cognitive biases** in large language models (LLMs). While prior work showed these biases emerge and even intensify after instruction tuning, it's unclear whether they are caused by **pretraining**, **finetuning data**, or **training randomness**.
 
@@ -49,7 +49,7 @@ Refer to those repositories for dataset structures, implementation details, and 
 
 All trained models across seeds and the subsampled Flan instruction dataset are hosted on Hugging Face:
 
-➡️ [**Hugging Face Collection**: `planted_in_pretraining`](https://huggingface.co/collections/itay1itzhak/planted-in-pretraining-68596cd05b50f3e93325b2d3)
+🤗 [**Hugging Face Collection**: `planted_in_pretraining`](https://huggingface.co/collections/itay1itzhak/planted-in-pretraining-68596cd05b50f3e93325b2d3)
 
 ---
 
@@ -111,8 +111,8 @@ python run_similarity_analysis.py \
 
 Example outputs (PDFs saved to `plots/`):
 
-![Randomness Plot](docs/figs/randomness_effect.pdf)  
-![Cross-Tuning PCA](docs/figs/cross_tuning_pca.pdf)
+![Randomness Plot](static/images/randomness_effect.png)  
+![Cross-Tuning PCA](static/images/clustering_pca_bias_1.png)
 
 ---
 
@@ -124,11 +124,11 @@ To cite our work, use the BibTeX entry from Google Scholar.
 
 ## 📜 License
 
-Apache License 2.0. See [`LICENSE`](LICENSE) for details.
+MIT License, Copyright (c) 2025 Itay Itzhak
 
 ---
 
 ## 📬 Contact
 
 For questions or collaborations, please reach out via GitHub Issues or email:  
-📧 [itay1itzhak at-gmail-com]
+📧 [itay1itzhak@gmaildotcom]
