@@ -8,7 +8,7 @@ _Disentangling the Origins of Cognitive Biases in Language Models._
 [![Contact](https://img.shields.io/badge/📧-contact-green)](mailto:itay1itzhak@gmail.com)
 
 <div align="center">
-  <img src="static/images/logo.png" alt="Project Logo" width="150"/>
+  <img src="static/images/logo.png" alt="Project Logo" width="300"/>
 </div>
 
 ---
