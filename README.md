@@ -111,8 +111,8 @@ python run_similarity_analysis.py \
 
 Example outputs (PDFs saved to `plots/`):
 
-![Randomness Plot](static/images/randomness_effect.png)  
-![Cross-Tuning PCA](static/images/clustering_pca_bias_1.png)
+<img src="static/images/randomness_consistency.png" alt="Randomness Plot" width="200"/>  
+<img src="static/images/clustering_pca_bias_1.png" alt="Cross-Tuning PCA" width="200"/>
 
 ---
 
