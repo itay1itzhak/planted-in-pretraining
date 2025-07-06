@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Planted in Pretraining, Swayed by Finetuning</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="A Case Study on the Origins of Cognitive Biases in LLMs" />
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <!-- Add these lines for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <style>
+<meta charset="utf-8"/>
+<title>Planted in Pretraining, Swayed by Finetuning | Origins of Cognitive Biases in LLMs</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="A Case Study on the Origins of Cognitive Biases in LLMs" name="description"/>
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet"/>
+<!-- Add these lines for icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet"/>
+<style>
     body { font-family: 'Noto Sans', sans-serif; background-color: #f9f9f9; padding: 1.5rem; font-size: 18px; }
     section.section { background: white; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); padding: 2rem; margin-bottom: 2rem; }
     .pdf-image, .two-col img { border: 1px solid #ccc; border-radius: 4px; max-width: 50%; margin: 0.5rem 0; }
@@ -55,103 +56,121 @@
     .title.is-2 .subtitle-text { font-size: 0.6em; display: block; margin-top: 0.2em; }
     .caption-box { background: #eef1f8; border-left: 4px solid #5d6d7e; padding: 1rem; font-size: 0.9em; margin-top: 1rem; }
   </style>
-</head>
+<meta content="language models, cognitive bias, pretraining, instruction tuning, LLMs, NLP, fairness, AI alignment" name="keywords"/><meta content="Itay Itzhak, Yonatan Belinkov, Gabriel Stanovsky" name="author"/><meta content="Planted in Pretraining, Swayed by Finetuning" property="og:title"/><meta content="This paper presents a causal analysis of the origins of cognitive biases in large language models, showing that pretraining is the dominant factor." property="og:description"/><meta content="static/images/logo.png" property="og:image"/><meta content="https://your-page-url" property="og:url"/><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Planted in Pretraining, Swayed by Finetuning",
+  "author": [
+    { "@type": "Person", "name": "Itay Itzhak" },
+    { "@type": "Person", "name": "Yonatan Belinkov" },
+    { "@type": "Person", "name": "Gabriel Stanovsky" }
+  ],
+  "datePublished": "2025",
+  "publisher": "arXiv",
+  "url": "https://arxiv.org/abs/2507.XXXXX",
+  "sameAs": "https://github.com/itay1itzhak/planted-in-pretraining"
+}
+</script></head>
 <body>
-
 <section class="hero is-light is-bold">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title is-2">Planted in Pretraining, Swayed by Finetuning
+<div class="hero-body">
+<div class="container has-text-centered">
+<h1 class="title is-2">Planted in Pretraining, Swayed by Finetuning
         <span class="subtitle-text">A Case Study on the Origins of Cognitive Biases in LLMs</span>
-      </h1>
-      <img src="static/images/logo.png" alt="Project Logo" class="hero-logo"/>
-      <div class="buttons is-centered mt-4">
-        <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2507.XXXXX"><span class="icon"><i class="ai ai-arxiv"></i></span><span>Paper</span></a>
-        <a class="button is-dark is-rounded" href="https://github.com/itay1itzhak/planted-in-pretraining"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
-        <a class="button is-dark is-rounded" href="https://huggingface.co/collections/itay1itzhak/planted-in-pretraining"><span class="icon">🤗</span><span>Models</span></a>
-        <a class="button is-dark is-rounded" href="mailto:itay1itzhak@gmail.com"><span class="icon">📧</span><span>Contact</span></a>
-      </div>
-      <p class="mt-4"><strong>Itay Itzhak</strong>, Yonatan Belinkov, Gabriel Stanovsky</p>
-      <p>Technion · Hebrew University · Allen Institute for AI</p>
-    </div>
-  </div>
+</h1>
+<img alt="Project Logo" class="hero-logo" src="static/images/logo.png"/>
+<div class="buttons is-centered mt-4">
+<a class="button is-dark is-rounded" href="https://arxiv.org/abs/2507.XXXXX"><span class="icon"><i class="ai ai-arxiv"></i></span><span>Paper</span></a>
+<a class="button is-dark is-rounded" href="https://github.com/itay1itzhak/planted-in-pretraining"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+<a class="button is-dark is-rounded" href="https://huggingface.co/collections/itay1itzhak/planted-in-pretraining"><span class="icon">🤗</span><span>Models</span></a>
+<a class="button is-dark is-rounded" href="mailto:itay1itzhak@gmail.com"><span class="icon">📧</span><span>Contact</span></a>
+</div>
+<p class="mt-4">
+  <strong><a href="https://itay1itzhak.github.io/" target="_blank">Itay Itzhak</a></strong>, <a href="https://belinkov.com/" target="_blank">Yonatan Belinkov</a>, <a href="https://gabrielstanovsky.github.io/" target="_blank">Gabriel Stanovsky</a>
+</p>
+<p>Technion · Hebrew University · Allen Institute for AI</p>
+</div>
+</div>
 </section>
-
 <section class="section">
-  <h2 class="title is-3">TL;DR</h2>
-  <p>We investigate the causal origin of cognitive biases in LLMs. Using a novel two-step causal framework, we find that <strong>biases primarily originate during pretraining</strong>, while instruction tuning and training randomness have only minor effects. These results suggest that many observed behaviors in LLMs, such as framing effects, belief bias, and stereotyping, are inherited from the pretraining phase. They are surfaced, not introduced, by finetuning. Our findings highlight the importance of addressing bias at the pretraining stage to develop more trustworthy and interpretable models.</p>
+<h2 class="title is-3">TL;DR</h2>
+<p>We investigate the causal origin of cognitive biases in LLMs. Using a novel two-step causal framework, we find that <strong>biases primarily originate during pretraining</strong>, while instruction tuning and training randomness have only minor effects. These results suggest that many observed behaviors in LLMs, such as framing effects, belief bias, and stereotyping, are inherited from the pretraining phase. They are surfaced, not introduced, by finetuning. Our findings highlight the importance of addressing bias at the pretraining stage to develop more trustworthy and interpretable models.</p>
 </section>
-
 <section class="section">
-  <h2 class="title is-3">Causal Framework</h2>
-  <div class="single-image-wrapper">
-    <img src="static/images/graph.png" alt="Causal Graph for Bias Emergence" class="single-centered-image"/>
-  </div>
-  <div class="caption-box">
+<h2 class="title is-3">Causal Framework</h2>
+<div class="single-image-wrapper">
+<img alt="Causal Graph for Bias Emergence" class="single-centered-image" src="static/images/graph.png"/>
+</div>
+<div class="caption-box">
     A high-level causal graph describing how observed biases in LLMs may stem from <strong>pretraining</strong>, <strong>instruction finetuning</strong>, or <strong>training randomness</strong>. Our analysis proceeds in two steps: Step 1 isolates the role of randomness by repeating finetuning with different seeds, and Step 2 uses <em>cross-tuning</em> to test whether instruction datasets or pretraining backbones are the dominant sources of bias.
   </div>
 </section>
-
 <section class="section">
-  <h2 class="title is-3">Abstract</h2>
-  <p>Large language models (LLMs) exhibit cognitive biases, which are systematic deviations from rational decision-making similar to those observed in humans. While prior work has noted the presence and amplification of such biases in instruction-tuned models, the origins of these behaviors remain unclear. We introduce a two-step causal methodology to disentangle the contributions of <strong>pretraining</strong>, <strong>instruction data</strong>, and <strong>training randomness</strong>. First, we assess how model behavior varies across random seeds. Then, using a <em>cross-tuning</em> setup, we swap instruction datasets between two models with different pretraining histories. Across 32 cognitive biases and two instruction datasets (Flan and Tulu-2), we find that pretraining overwhelmingly determines the model’s bias pattern. These insights highlight the central role of pretraining in shaping LLM behavior and have implications for evaluation and mitigation strategies.</p>
+<h2 class="title is-3">Abstract</h2>
+<p>Large language models (LLMs) exhibit cognitive biases, which are systematic deviations from rational decision-making similar to those observed in humans. While prior work has noted the presence and amplification of such biases in instruction-tuned models, the origins of these behaviors remain unclear. We introduce a two-step causal methodology to disentangle the contributions of <strong>pretraining</strong>, <strong>instruction data</strong>, and <strong>training randomness</strong>. First, we assess how model behavior varies across random seeds. Then, using a <em>cross-tuning</em> setup, we swap instruction datasets between two models with different pretraining histories. Across 32 cognitive biases and two instruction datasets (Flan and Tulu-2), we find that pretraining overwhelmingly determines the model’s bias pattern. These insights highlight the central role of pretraining in shaping LLM behavior and have implications for evaluation and mitigation strategies.</p>
+</section>
+<section class="section">
+<h2 class="title is-3">Randomness</h2>
+<p>We examine the effect of random seed variation by finetuning each model three times with identical data and varying initialization. Bias scores and task accuracy (MMLU) are measured across seeds to assess stability.</p>
+<div class="two-col img">
+<img alt="Bias Score Std Dev" class="pdf-image" src="static/images/randomness_std.png"/>
+<img alt="Bias Mean/Agreement" class="pdf-image" src="static/images/randomness_consistency.png"/>
+</div>
+<p><strong>Result:</strong> Training randomness introduces moderate variation, especially in behavioral biases, though key trends remain consistent. Aggregating results across seeds, using the mean or majority vote, stabilizes bias estimates and preserves the original model’s tendencies.</p>
+</section>
+<section class="section">
+<h2 class="title is-3">Cross-Tuning</h2>
+<p>To separate the effects of pretraining from instruction data, we <strong>cross-tune</strong> two models (OLMo-7B and T5-11B) on each other's datasets (Tulu-2 and Flan). This creates four model variants with distinct combinations of pretraining and instruction. We then analyze their behavior using PCA on bias vectors and assess cluster separability.</p>
+<div class="two-col img">
+<img alt="Cross-Tuning Setup" src="static/images/cross tuning_setup.png"/>
+<img alt="Cross-Tuning Causality" src="static/images/cross_tuning_flow_chart.png"/>
+</div>
+<p><strong>Result:</strong> Models cluster based on <strong>pretraining backbone</strong>, not instruction data. Even after instruction datasets are swapped, the model’s bias profile stays aligned with its pretraining history. This pattern holds across all 32 tested biases and is consistently replicated using community-trained models (Llama2-7B and Mistral-7B finetuned on Tulu-2 and ShareGPT).</p>
+<div class="single-image-wrapper">
+<img alt="PCA Bias Clustering" class="single-centered-image" src="static/images/clustering_pca_bias_1.png"/>
+</div>
 </section>
 
 <section class="section">
-  <h2 class="title is-3">Randomness</h2>
-  <p>We examine the effect of random seed variation by finetuning each model three times with identical data and varying initialization. Bias scores and task accuracy (MMLU) are measured across seeds to assess stability.</p>
-  <div class="two-col img">
-    <img src="static/images/randomness_std.png" alt="Bias Score Std Dev" class="pdf-image"/>
-    <img src="static/images/randomness_consistency.png" alt="Bias Mean/Agreement" class="pdf-image"/>
-  </div>
-  <p><strong>Result:</strong> Training randomness introduces moderate variation, especially in behavioral biases, though key trends remain consistent. Aggregating results across seeds, using the mean or majority vote, stabilizes bias estimates and preserves the original model’s tendencies.</p>
+<h2 class="title is-3">Related Work</h2>
+<p>
+    Cognitive biases in LLMs have been observed in various contexts, from decision-making to reasoning tasks. Prior work, such as <a href="https://aclanthology.org/2024.findings-emnlp.739/" target="_blank">Echterhoff et al. (2024)</a> and <a href="https://aclanthology.org/2024.findings-acl.29/" target="_blank">Koo et al. (2024)</a>, has demonstrated that models exhibit human-like framing and belief biases. Other studies, like <a href="https://arxiv.org/abs/2403.09798" target="_blank">Alsagheer et al. (2024)</a> and <a href="https://arxiv.org/abs/2412.03605" target="_blank">Shaikh et al. (2024)</a>, proposed benchmarks and frameworks to evaluate such behavior in instruction-tuned LLMs.
+  </p>
+<p class="mt-4">
+    A growing line of research investigates whether these biases stem from instruction tuning. <a href="https://aclanthology.org/2024.tacl-1.43/" target="_blank">Itzhak et al. (2024)</a> showed that instruction tuning can amplify certain cognitive biases in language models, suggesting a link between alignment methods and biased behaviors. However, other work suggests instruction tuning may only surface pre-existing tendencies. For example, <a href="https://arxiv.org/abs/2407.14985" target="_blank">Antoniades et al. (2024)</a> and <a href="https://arxiv.org/abs/2402.00838" target="_blank">Groeneveld et al. (2024)</a> argue that most model capabilities—both helpful and harmful—are planted during pretraining and merely activated by tuning.
+  </p>
+<p class="mt-4">
+    Our study builds on this foundation with a causal framework that isolates the roles of <strong>pretraining, instruction data, and training randomness</strong>. While prior work has hinted at the influence of pretraining (e.g., <a href="https://arxiv.org/abs/2207.07051" target="_blank">Dasgupta et al., 2022</a>; <a href="https://arxiv.org/abs/2206.14576" target="_blank">Binz &amp; Schulz, 2022</a>), we systematically demonstrate that biases consistently align with a model’s <strong>pretraining history</strong>, even under cross-tuning and seed variation. Our findings underscore the limitations of post-hoc alignment for bias mitigation and advocate for interventions at the pretraining stage.
+  </p>
 </section>
-
 <section class="section">
-  <h2 class="title is-3">Cross-Tuning</h2>
-  <p>To separate the effects of pretraining from instruction data, we <strong>cross-tune</strong> two models (OLMo-7B and T5-11B) on each other's datasets (Tulu-2 and Flan). This creates four model variants with distinct combinations of pretraining and instruction. We then analyze their behavior using PCA on bias vectors and assess cluster separability.</p>
-  
-  <div class="two-col img">
-    <img src="static/images/cross tuning_setup.png" alt="Cross-Tuning Setup"/>
-    <img src="static/images/cross_tuning_flow_chart.png" alt="Cross-Tuning Causality"/>
-  </div>
-  <p><strong>Result:</strong> Models cluster based on <strong>pretraining backbone</strong>, not instruction data. Even after instruction datasets are swapped, the model’s bias profile stays aligned with its pretraining history. This pattern holds across all 32 tested biases and is consistently replicated using community-trained models (Llama2-7B and Mistral-7B finetuned on Tulu-2 and ShareGPT).</p>  
-  <div class="single-image-wrapper">
-    <img src="static/images/clustering_pca_bias_1.png" alt="PCA Bias Clustering" class="single-centered-image"/>
-  </div>
+<h2 class="title is-3">Conclusion</h2>
+<p>Cognitive biases in LLMs are <strong>shaped during pretraining</strong>, not introduced during instruction tuning or caused by randomness. Our causal analysis shows that post-hoc alignment methods alone may not be sufficient for bias mitigation. These findings highlight a broader truth: many downstream behaviors of LLMs are reflections of their pretraining process. If we want to build models that are more reliable and fair, we must consider the impact of pretraining. </p>
 </section>
-
 <section class="section">
-  <h2 class="title is-3">Conclusion</h2>
-  <p>Cognitive biases in LLMs are <strong>shaped during pretraining</strong>, not introduced during instruction tuning or caused by randomness. Our causal analysis shows that post-hoc alignment methods alone may not be sufficient for bias mitigation. These findings highlight a broader truth: many downstream behaviors of LLMs are reflections of their pretraining process. If we want to build models that are more reliable and fair, we must consider the impact of pretraining. </p>
-</section>
-
-
-<section class="section">
-  <h2 class="title is-3">BibTeX</h2>
-  <pre class="bibtex-box">@article{itzhak2025planted,
+<h2 class="title is-3">BibTeX</h2>
+<pre class="bibtex-box">@article{itzhak2025planted,
   title={Planted in Pretraining, Swayed by Finetuning: A Case Study on the Origins of Cognitive Biases in LLMs},
-  author={Itzhak, Itay and Stanovsky, Gabriel and Rosenfeld, Nir and Belinkov, Yonatan},
+  author={Itzhak, Itay and Stanovsky, Gabriel and Belinkov, Yonatan},
   journal={arXiv preprint arXiv:2507.XXXXX},
   year={2025}
 }</pre>
 </section>
-
 <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
+<div class="container">
+<div class="columns is-centered">
+<div class="column is-8">
+<div class="content">
+<p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br/> This website is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
 </footer>
-
 </body>
 </html>
