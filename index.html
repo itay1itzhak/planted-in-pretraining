@@ -3,6 +3,15 @@
 
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WT6XFWZDMG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WT6XFWZDMG');
+</script>
 <meta charset="utf-8"/>
 <title>Planted in Pretraining, Swayed by Finetuning | Origins of Cognitive Biases in LLMs</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -127,10 +136,16 @@
 <img alt="Cross-Tuning Causality" src="static/images/cross_tuning_flow_chart.png"/>
 </div>
 <p><strong>Result:</strong> Models cluster based on <strong>pretraining backbone</strong>, not instruction data. Even after instruction datasets are swapped, the model’s bias profile stays aligned with its pretraining history. This pattern holds across all 32 tested biases and is consistently replicated using community-trained models (Llama2-7B and Mistral-7B finetuned on Tulu-2 and ShareGPT).</p>
-<div class="single-image-wrapper">
-<img alt="PCA Bias Clustering" class="single-centered-image" src="static/images/clustering_pca_bias_1.png"/>
+<div class="two-col img">
+  <img alt="PCA Bias Clustering T5\OLMo" class="single-centered-image" src="static/images/clustering_pca_bias_1.png"/>
+  <img alt="PCA Bias Clustering Llama2\Mistral" class="single-centered-image" src="static/images/clustering_pca_bias_2.png"/>
 </div>
 </section>
+
+<section class="section">
+  <h2 class="title is-3">Conclusion</h2>
+  <p>Cognitive biases in LLMs are <strong>shaped during pretraining</strong>, not introduced during instruction tuning or caused by randomness. Our causal analysis shows that post-hoc alignment methods alone may not be sufficient for bias mitigation. These findings highlight a broader truth: many downstream behaviors of LLMs are reflections of their pretraining process. If we want to build models that are more reliable and fair, we must consider the impact of pretraining. </p>
+  </section>
 
 <section class="section">
 <h2 class="title is-3">Related Work</h2>
@@ -144,10 +159,7 @@
     Our study builds on this foundation with a causal framework that isolates the roles of <strong>pretraining, instruction data, and training randomness</strong>. While prior work has hinted at the influence of pretraining (e.g., <a href="https://arxiv.org/abs/2207.07051" target="_blank">Dasgupta et al., 2022</a>; <a href="https://arxiv.org/abs/2206.14576" target="_blank">Binz &amp; Schulz, 2022</a>), we systematically demonstrate that biases consistently align with a model’s <strong>pretraining history</strong>, even under cross-tuning and seed variation. Our findings underscore the limitations of post-hoc alignment for bias mitigation and advocate for interventions at the pretraining stage.
   </p>
 </section>
-<section class="section">
-<h2 class="title is-3">Conclusion</h2>
-<p>Cognitive biases in LLMs are <strong>shaped during pretraining</strong>, not introduced during instruction tuning or caused by randomness. Our causal analysis shows that post-hoc alignment methods alone may not be sufficient for bias mitigation. These findings highlight a broader truth: many downstream behaviors of LLMs are reflections of their pretraining process. If we want to build models that are more reliable and fair, we must consider the impact of pretraining. </p>
-</section>
+
 <section class="section">
 <h2 class="title is-3">BibTeX</h2>
 <pre class="bibtex-box">@article{itzhak2025planted,
