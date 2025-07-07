@@ -135,7 +135,7 @@
 <img alt="Cross-Tuning Setup" src="static/images/cross tuning_setup.png"/>
 <img alt="Cross-Tuning Causality" src="static/images/cross_tuning_flow_chart.png"/>
 </div>
-<p><strong>Result:</strong> Models cluster based on <strong>pretraining backbone</strong>, not instruction data. Even after instruction datasets are swapped, the model’s bias profile stays aligned with its pretraining history. This pattern holds across all 32 tested biases and is consistently replicated using community-trained models (Llama2-7B and Mistral-7B finetuned on Tulu-2 and ShareGPT).</p>
+<p><strong>Result:</strong> Models cluster by <strong>pretraining backbone</strong>, not instruction data. Even after swapping instruction datasets, bias profiles remain aligned with pretraining. In the PCA plots below, fill color indicates pretraining and shape denotes instruction tuning -- PC1 clearly separates models by pretraining, confirming its dominant effect. This pattern holds across 32 biases and is replicated with community-trained models (Llama2-7B and Mistral-7B fine-tuned on Tulu-2 and ShareGPT).</p> 
 <div class="two-col img">
   <img alt="PCA Bias Clustering T5\OLMo" class="single-centered-image" src="static/images/clustering_pca_bias_1.png"/>
   <img alt="PCA Bias Clustering Llama2\Mistral" class="single-centered-image" src="static/images/clustering_pca_bias_2.png"/>
