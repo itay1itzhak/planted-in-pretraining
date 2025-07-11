@@ -3,7 +3,7 @@
 _Disentangling the Origins of Cognitive Biases in Language Models._
 
 [![Paper](https://img.shields.io/badge/arxiv-paper-red)](https://arxiv.org/abs/2507.07186)
-[![Models](https://img.shields.io/badge/🤗-models-yellow)]([https://huggingface.co/collections/itay1itzhak/planted-in-pretraining](https://huggingface.co/collections/itay1itzhak/planted-in-pretraining-68596cd05b50f3e93325b2d3))
+[![Models](https://img.shields.io/badge/🤗-models-yellow)](https://huggingface.co/collections/itay1itzhak/planted-in-pretraining-68596cd05b50f3e93325b2d3)
 [![Website](https://img.shields.io/badge/🌐-website-blue)](https://itay1itzhak.github.io/planted-in-pretraining/)
 [![Contact](https://img.shields.io/badge/📧-contact-green)](mailto:itay1itzhak@gmail.com)
 
