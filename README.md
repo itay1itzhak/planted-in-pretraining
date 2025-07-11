@@ -3,7 +3,7 @@
 _Disentangling the Origins of Cognitive Biases in Language Models._
 
 [![Paper](https://img.shields.io/badge/arxiv-paper-red)](https://arxiv.org/abs/2507.07186)
-[![Models](https://img.shields.io/badge/🤗-models-yellow)](https://huggingface.co/collections/itay1itzhak/planted-in-pretraining)
+[![Models](https://img.shields.io/badge/🤗-models-yellow)]([https://huggingface.co/collections/itay1itzhak/planted-in-pretraining](https://huggingface.co/collections/itay1itzhak/planted-in-pretraining-68596cd05b50f3e93325b2d3))
 [![Website](https://img.shields.io/badge/🌐-website-blue)](https://itay1itzhak.github.io/planted-in-pretraining/)
 [![Contact](https://img.shields.io/badge/📧-contact-green)](mailto:itay1itzhak@gmail.com)
 
@@ -17,7 +17,7 @@ _Disentangling the Origins of Cognitive Biases in Language Models._
 
 This repository contains the code for our paper:
 
-> <a href="https://arxiv.org/abs/2507.xxxx" target="_blank"><strong>Planted in Pretraining, Swayed by Finetuning: A Case Study on the Origins of Cognitive Biases in LLMs</strong></a>
+> <a href="https://arxiv.org/abs/2507.07186" target="_blank"><strong>Planted in Pretraining, Swayed by Finetuning: A Case Study on the Origins of Cognitive Biases in LLMs</strong></a>
 
 We investigate the **origin of cognitive biases** in large language models (LLMs). While prior work showed these biases emerge and even intensify after instruction tuning, it's unclear whether they are caused by **pretraining**, **finetuning data**, or **training randomness**.
 
@@ -120,7 +120,19 @@ Example outputs (PDFs saved to `plots/`):
 
 ## 📚 Citation
 
-To cite our work, use the BibTeX entry from Google Scholar.
+To cite our work, use the CoLM BibTeX entry from Google Scholar or:
+
+```bibtex
+@misc{itzhak2025plantedpretrainingswayedfinetuning,
+      title={Planted in Pretraining, Swayed by Finetuning: A Case Study on the Origins of Cognitive Biases in LLMs}, 
+      author={Itay Itzhak and Yonatan Belinkov and Gabriel Stanovsky},
+      year={2025},
+      eprint={2507.07186},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2507.07186}, 
+}
+```
 
 ---
 
